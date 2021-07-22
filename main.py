@@ -22,7 +22,7 @@ class RSP(MDApp):
 
         self.root.ids.game_image.source=RSP.gameOption.get(randomNum)
 
-#TODO może transition inne ?
+
 
 if __name__ == '__main__':
     RSP().run()
