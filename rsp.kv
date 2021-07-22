@@ -1,0 +1,48 @@
+ScreenManager:
+    id:screen_manager
+    Screen:
+        name:"start_screen"
+        BoxLayout:
+            size_hint:(.6,.6)
+            pos_hint:{'center_x':.5,'center_y':.5}
+            orientation:'vertical'
+            spacing:'20dp'
+            Image:
+                source:'logo.png'
+                size_hint:(.6,.6)
+                pos_hint:{'center_x':.5,'center_y':.5}
+            MDFillRoundFlatButton:
+                text: "PLAY"
+                font_style:"H3"
+                theme_text_color: "Custom"
+                text_color: 0, 0, 0, 1
+                line_color: 0, 0, 0, 0
+                size_hint:(.6,.6)
+                pos_hint:{'center_x':.5,'center_y':.5}
+                on_release:
+                    screen_manager.current="play_screen"
+
+
+    Screen:
+        name:"play_screen"
+        BoxLayout:
+            id:container_play_screen
+            size_hint:(.6,.6)
+            pos_hint:{'center_x':.5,'center_y':.5}
+            orientation:'vertical'
+
+            Image:
+                id:game_image
+                source:'blank.png'
+                size_hint:(.6,.6)
+                pos_hint:{'center_x':.5,'center_y':.5}
+
+            MDFillRoundFlatButton:
+                on_release:app.addImage()
+                text: "DRAW"
+                font_style:"H5"
+                pos_hint:{'center_x':.5,'center_y':.5}
+
+
+
+
